@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import MainPage from "./pages/MainPage";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Route, Routes } from "react-router-dom";
+import Navigationbar from "./components/Navigationbar";
+import Home from "./pages/Home";
+import Footer from "./components/Footer";
+import Forecast from "./pages/Forecast";
+import "./App.css"
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navigationbar />
+      <div className="container">
+        <Routes>
+          <Route path="*" element={<Home/>} />
+          <Route path="/location" element={<MainPage/>} />
+          <Route path="/forecast" element={<Forecast/>} />
+
+        </Routes> 
+        </div>
+        <Footer />
+
+
+     
     </div>
-  );
+  )
 }
 
 export default App;

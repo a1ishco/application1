@@ -1,0 +1,38 @@
+body{
+    /* background-image: url("../assets/0ef3bb66d9216fffcea9022628f7bb26.gif"); */
+background-image: url("../assets/1649411738_weather-desk_1.jpg");
+    background-repeat: no-repeat;
+background-size: fill;
+background-attachment: fixed;
+
+}
+
+.homePageTxt , .headerText>h1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: gainsboro;
+    text-shadow: 2px 2px rgba(53, 53, 53, 0.8);
+    font-size: 60px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.homeText {
+    height: 200px;
+    line-height: 100px;
+    text-align: center;
+    animation: txtTranslate 0.9s linear;
+}
+
+@keyframes txtTranslate {
+    0%{
+        transform: translateX(-500px);
+        opacity: 0.3;
+    }
+
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+
+    }
+    
+}
+  
