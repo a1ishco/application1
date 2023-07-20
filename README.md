@@ -1,4 +1,4 @@
-Project demo: https://weather-appreacted.netlify.app/forecast
+Project demo: https://weather-appreacted.netlify.app/
 
 # Getting Started with Create React App
 
