@@ -20,7 +20,7 @@ export default function Forecast() {
     //Search button function
     function handleClick() {
         setShow(true)
-        var FETCH_URL = 'http://api.weatherapi.com/v1/forecast.json?key=a3b5720f8c00466f91a142434231807&q=' + inputValue + '&days=5&aqi=no&alerts=no';
+        var FETCH_URL = 'https://api.weatherapi.com/v1/forecast.json?key=a3b5720f8c00466f91a142434231807&q=' + inputValue + '&days=5&aqi=no&alerts=no';
         axios.get(FETCH_URL).then((response) => {
             setInfo(response.data);
             console.log(response.data);
