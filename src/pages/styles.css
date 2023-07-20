@@ -1,13 +1,23 @@
-body{
-    /* background-image: url("../assets/0ef3bb66d9216fffcea9022628f7bb26.gif"); */
-background-image: url("../assets/1649411738_weather-desk_1.jpg");
-    background-repeat: no-repeat;
-background-size: fill;
-background-attachment: fixed;
+body {
+        background: linear-gradient(-45deg, #370269, #1864ac, #9c27b0);
+        background-size: 400% 400%;
+        animation: gradient-bg 20s ease infinite;
+    }
+    
+    @keyframes gradient-bg {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
 
-}
-
-.homePageTxt , .headerText>h1{
+.homePageTxt,
+.headerText>h1 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: gainsboro;
     text-shadow: 2px 2px rgba(53, 53, 53, 0.8);
@@ -15,6 +25,7 @@ background-attachment: fixed;
     display: inline-block;
     vertical-align: middle;
 }
+
 .homeText {
     height: 200px;
     line-height: 100px;
@@ -23,16 +34,28 @@ background-attachment: fixed;
 }
 
 @keyframes txtTranslate {
-    0%{
+    0% {
         transform: translateX(-500px);
         opacity: 0.3;
     }
 
-    100%{
+    100% {
         transform: translateX(0px);
         opacity: 1;
 
     }
-    
+
 }
-  
+
+@media screen and (max-width: 770px) {
+table{
+    font-size: 10px;
+}
+img{
+    width:30px;
+}
+svg{
+    height: 10px;
+    width: 10px;
+}
+}
