@@ -7,12 +7,12 @@ function Home() {
 
 console.log(value);
     return (
-       <>
+       <div className="mb-5">
        <div className="homeText container mt-3">
         <h1 className="homePageTxt mt-5">{value}</h1>
        </div>
        
-       </>
+       </div>
     )
 
 }

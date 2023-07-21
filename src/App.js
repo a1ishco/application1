@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import Footer from "./components/Footer";
 import Forecast from "./pages/Forecast";
 import "./App.css"
+import NotFound from "./pages/NotFound";
 
 
 function App() {
@@ -15,9 +16,10 @@ function App() {
       <Navigationbar />
       <div className="container">
         <Routes>
-          <Route path="*" element={<Home/>} />
+          <Route path="/" element={<Home/>} />
           <Route path="/location" element={<MainPage/>} />
           <Route path="/forecast" element={<Forecast/>} />
+          <Route path="*" element={<NotFound/>} />
 
         </Routes> 
         </div>

@@ -36,7 +36,7 @@ export default function Forecast() {
 
     //Rendering
     return (
-        <main className='forecast'>
+        <main className='forecast mb-5'>
             {/* {info?.forecast.forecastday.map((datas, i) => (
                 <div key={i}>
                     <div><hr />Date: {datas?.date}</div>
@@ -54,7 +54,7 @@ export default function Forecast() {
 
             <div className='row d-flex justify-content-center'>
 
-                <input className='text-center mt-5 col-4' onKeyPress={handleKeyPress} onChange={onChangeInput} on style={{ width: '40%' }} type="text" id="message" placeholder='Enter the city: ex. Baku' />
+                <input className='text-center mt-5 col-4' onKeyDown={handleKeyPress} onChange={onChangeInput} on style={{ width: '40%' }} type="text" id="message" placeholder='Enter the city: ex. Baku' />
                 <button type="button" onClick={handleClick} class="btn
                  btn-primary mt-5 g-0 col-1"><svg className='svgIcon' xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" /></svg></button>
             </div>

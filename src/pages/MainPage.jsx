@@ -33,7 +33,7 @@ export default function MainPage() {
 
 
   //Hour settings for card styles
-  var mode = "'card mt-5 col-6 bg-dark text-light";
+  var mode = "'card mt-5 col-12 bg-dark text-light";
   const hour = (((info?.location?.localtime)?.slice(11, 13)));
   if ((hour >= 6 && hour <= 20)) {
     mode = "card mt-5 col-lg-12 col-md-6 bg-light text-dark"
@@ -48,7 +48,7 @@ export default function MainPage() {
     </div>
         <div className='row d-flex justify-content-center'>
 
-          <input className='text-center mt-5 col-4' onKeyPress={handleKeyPress} onChange={onChangeInput} on style={{ width: '40%' }} type="text" id="message" placeholder='Enter the city: ex. Baku' />
+          <input className='text-center mt-5 col-4' onKeyDown={handleKeyPress} onChange={onChangeInput} on style={{ width: '40%' }} type="text" id="message" placeholder='Enter the city: ex. Baku' />
           <button type="button" onClick={handleClick} class="btn btn-primary mt-5 g-0 col-1"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" /></svg></button>
         </div>
         <div className="row justify-content-md-center mb-5">
@@ -59,18 +59,21 @@ export default function MainPage() {
             <h6>{info?.location?.region}</h6>
             <h6>{info?.location?.country} - {(info?.location?.localtime)?.slice(0, 10)}</h6>
             <hr />
-            <div className="row justify-content-md-center">
+            <div className="container">
+              <div className="row justify-content-center">
               <h4>{info?.current?.condition?.text}<img width="50px" src={info?.current?.condition.icon} />
               </h4>
-              <div className="row justify-content-evenly g-0">
-                <div className='alert alert-primary col-4 mb-3 text-break'>
-                  {info?.current?.temp_c} Celcius
+              <div className="row d-inline justify-content-center g-0">
+                <div className='alert alert-primary col-12 col-md-12 mb-3 text-break'>
+                  <h4>{info?.current?.temp_c} C / {info?.current?.temp_f} F</h4>
                 </div>
-                <div className='alert alert-primary col-4 mb-3 text-break'>
-                  {info?.current?.temp_f} Fahreneit
+                <div className='alert alert-primary col-12 col-md-12 mb-3 text-break'>
+                  <h4>Wind: {info?.current?.wind_kph} km/h ({info?.current?.wind_dir})</h4>
                 </div>
               </div>
             </div>
+            </div>
+            
           </div>
         </div>
         </div>
