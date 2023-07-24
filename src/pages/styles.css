@@ -66,6 +66,7 @@ body {
 }
 
 .errorMessageTxtH1,
-.errorMessageTxtH5 {
+.errorMessageTxtH5,
+.loadingTextH1 {
     color: white;
 }

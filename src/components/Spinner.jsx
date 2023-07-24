@@ -3,9 +3,8 @@ import "./styles.css"
 
 const Spinner = () => {
     return (
-        <div className="spinner-container">
-            <div className="loading-spinner">
-            </div>
+        <div className="spinner-border" role="status">
+            <span className="sr-only">Loading...</span>
         </div>)
 }
 
