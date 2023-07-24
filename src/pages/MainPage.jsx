@@ -58,7 +58,7 @@ export default function MainPage() {
       <div className='row d-flex justify-content-center'>
 
         <input className='text-center mt-5 col-4' onKeyDown={handleKeyPress} onChange={onChangeInput} on style={{ width: '40%' }} type="text" id="message" placeholder='Enter the city: ex. Baku' />
-        <button type="button" onClick={handleClick} class="btn btn-primary mt-5 g-0 col-1"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" /></svg></button>
+        <button type="button" onClick={handleClick} className="btn btn-primary mt-5 g-0 col-1"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" /></svg></button>
       </div>
       <div className="row justify-content-md-center mb-5">
         <div className={isLoading ? "loading-spinner" : "d-none"}>
@@ -79,7 +79,7 @@ export default function MainPage() {
               <hr />
               <div className="container">
                 <div className="row justify-content-center">
-                  <h4>{info?.current?.condition?.text}<img width="50px" src={info?.current?.condition.icon} />
+                  <h4>{info?.current?.condition?.text}<img alt="" width="50px" src={info?.current?.condition.icon} />
                   </h4>
                   <div className="row d-inline justify-content-center g-0">
                     <div className='alert alert-primary col-12 col-md-12 mb-3 text-break'>

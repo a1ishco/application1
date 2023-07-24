@@ -63,9 +63,9 @@ export default function Forecast() {
 
             <div className='row d-flex justify-content-center'>
 
-                <input className='text-center mt-5 col-4' onKeyDown={handleKeyPress} onChange={onChangeInput} on style={{ width: '40%' }} type="text" id="message" placeholder='Enter the city: ex. Baku' />
+                <input className='text-center mt-5 col-4' onKeyDown={handleKeyPress} onChange={onChangeInput} on style={{ width: "40%" }} type="text" id="message" placeholder='Enter the city: ex. Baku' />
                 <button type="button" onClick={handleClick} class="btn
-                 btn-primary mt-5 g-0 col-1"><svg className='svgIcon' xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" /></svg></button>
+                 btn-primary mt-5 g-0 col-1"><svg className='svgIcon' xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" /></svg></button>
             </div>
             <div className="row d-flex m-0 justify-content-center col-12">
                 <div className='container'>
@@ -89,7 +89,7 @@ export default function Forecast() {
                                     </div>
                                     <div className="dateCard">
 
-                                        <h4>{info?.forecast.forecastday.map((datas, i) => (
+                                        <h4>{info?.forecast?.forecastday.map((datas, i) => (
                                             <div key={i}>
 
                                                 <div className='mb-3'>{datas?.date}</div>
@@ -103,11 +103,11 @@ export default function Forecast() {
                                                             <th>Rain</th>
                                                         </tr>
 
-                                                        {datas.hour.map((hours, j) => (
+                                                        {datas?.hour.map((hours, j) => (
                                                             <tr key={j}>
                                                                 <td>{(hours?.time).slice(10, 16)}</td>
                                                                 <td>{hours?.temp_c}C <hr /> {hours?.temp_f}F</td>
-                                                                <td>{hours?.condition.text}<hr /><img width="50px" src={hours?.condition.icon} /></td>
+                                                                <td>{hours?.condition.text}<hr /><img alt="" width="50px" src={hours?.condition.icon} /></td>
                                                                 <td>{hours?.wind_kph} km/h <hr />({hours?.wind_dir})</td>
                                                                 <td>{hours?.chance_of_rain}%</td>
                                                             </tr>
