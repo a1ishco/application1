@@ -39,7 +39,6 @@ export default function Forecast() {
             .finally(() => {
             });
 
-
     }
 
     var mode = "card mt-5 col-12 bg-light text-dark g-2";
