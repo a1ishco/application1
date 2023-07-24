@@ -11,19 +11,19 @@ export default function Footer() {
       <div className='w-100 pt-0'>
         <section className='mb-4'>
           <Link to='https://www.instagram.com/a1ishco'><button className='text-dark m-1' >
-            <icon fab className='fab fa-facebook-f' />
+            <icon className='fab fa-facebook-f' />
           </button></Link>
 
           <Link to='https://www.instagram.com/a1ishco'><button className='text-dark m-1' >
-            <icon fab className='fab fa-instagram' />
+            <icon className='fab fa-instagram' />
           </button></Link>
 
           <Link to='https://www.linkedin.com/in/ali-bashirov-59bb7b165/'><button className='text-dark m-1' >
-            <icon fab className='fab fa-linkedin' />
+            <icon className='fab fa-linkedin' />
           </button></Link>
 
           <Link to='https://github.com/a1ishco'><button className='text-dark m-1' >
-            <icon fab className='fab fa-github' />
+            <icon className='fab fa-github' />
           </button></Link>
         </section>
       </div>
