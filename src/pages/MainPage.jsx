@@ -53,9 +53,11 @@ export default function MainPage() {
     var mode = "card mt-5 col-12 bg-dark text-light";
     const hour = info?.location?.localtime?.slice(11, 13);
     if (hour >= 6 && hour <= 20) {
-      return (mode = "card mt-5 col-lg-12 col-md-6 bg-light text-dark");
+      mode = "card mt-5 col-lg-12 col-md-6 bg-light text-dark"
+      return (mode);
     } else {
-      return (mode = "card mt-5 col-12 bg-dark text-light");
+      mode = "card mt-5 col-12 bg-dark text-light"
+      return (mode);
     }
   }
 
